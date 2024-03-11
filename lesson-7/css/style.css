@@ -1,0 +1,77 @@
+body {
+   font-family: "Lato", serif;
+   margin: 0px;
+}
+
+[class*="_container"] {
+   max-width: 810px;
+   margin: 0 auto;
+}
+
+.articl {
+   font-weight: 900;
+   font-size: 46px;
+   line-height: 130%;
+
+   color: rgb(30, 33, 44);
+
+   margin-bottom: 89px;
+}
+
+.img {
+   margin-bottom: 60px;
+   border-radius: 4px;
+}
+
+.text {
+   line-height: 160%;
+
+   color: rgb(66, 69, 81);
+
+   padding-bottom: 24px;
+}
+
+.text.text--bold,
+.quota {
+   color: rgb(30, 33, 44);
+
+   font-size: 20px;
+   font-weight: 700;
+   line-height: 150%;
+}
+
+.quota {
+   padding-left: 58px;
+   margin: 48px 0px;
+}
+
+.list {
+   margin-left: 32px;
+   margin-bottom: 24px;
+}
+
+.item {
+   color: rgb(66, 69, 81);
+   line-height: 160%;
+   margin-bottom: 4px;
+}
+
+.block {
+   height: 400px;
+   padding: 20px;
+   overflow: auto;
+}
+.block1 {
+   background-color: slategrey;
+   background-image: url(../img/circle.svg);
+   background-repeat: no-repeat;
+   background-attachment: scroll;
+   background-position: center;
+   background-size: contain;
+
+   margin-bottom: 20px;
+}
+
+.block2 {
+   background: slategrey url(../img/circle.svg) no-repeat scroll center / contain;
+}
