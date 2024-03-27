@@ -1,0 +1,205 @@
+.wraper {
+   height: 3000px;
+}
+
+.page {
+   padding: 50px;
+}
+
+.poligon {
+   width: 250px;
+   height: 500px;
+   padding: 25px;
+   margin: 0 auto;
+   margin-bottom: 100px;
+
+   background-color: rgb(229, 226, 226);
+   color: white;
+
+   text-transform: uppercase;
+
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 24px;
+   font-weight: 700;
+}
+
+.poligon__layer {
+   padding: 25px;
+   width: 450px;
+}
+.poligon__layer--green {
+   background-color: olivedrab;
+   position: relative;
+   z-index: 0;
+
+   height: 250px;
+}
+.poligon__layer--orange {
+   background-color: orange;
+   position: relative;
+   width: 300px;
+   height: 300px;
+   /* z-index:  */
+}
+.poligon__layer--purpul {
+   background-color: plum;
+   width: 600px;
+   left: -150px;
+   position: relative;
+   z-index: -1;
+}
+/*                      */
+.poligon2 {
+   width: 500px;
+   margin: 0 auto;
+   margin-bottom: 50px;
+   padding: 25px;
+   border: 1px solid gainsboro;
+
+   /* inhairit */
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 16px;
+}
+
+.poligon2 > * {
+   padding: 10px;
+   outline: 1px solid gainsboro;
+}
+
+.poligon2 > *:not(:last-child) {
+   margin-bottom: 5px;
+}
+
+.poligon2__button:hover {
+   cursor: pointer;
+   outline: 1px solid gray;
+}
+
+.box {
+   position: relative;
+   width: 100%;
+   height: 300px;
+   text-align: center;
+}
+.box * {
+   position: absolute;
+}
+
+.box__element {
+   width: 150px;
+   padding: 10px;
+}
+
+.element6 {
+   z-index: 6;
+}
+.element4 {
+   z-index: 4;
+   left: 30px;
+   top: 40px;
+}
+.element2 {
+   z-index: 2;
+   left: 50px;
+   top: 70px;
+}
+
+.box__element-chainge {
+   background-color: rgb(191, 234, 104);
+   outline: 2px solid yellowgreen;
+   width: 170px;
+   height: 220px;
+   line-height: 220px;
+   left: 20px;
+   top: 20px;
+   z-index: auto;
+}
+
+.element6,
+.element4,
+.element2 {
+   border: 2px solid steelblue;
+   background-color: rgb(171, 211, 244);
+}
+
+.element-auto1,
+.element-auto2,
+.element-auto3 {
+   border: 2px solid tomato;
+   background-color: rgb(225, 157, 145);
+   z-index: auto;
+}
+
+.element-auto1 {
+   top: 150px;
+}
+.element-auto2 {
+   top: 180px;
+   left: 30px;
+}
+.element-auto3 {
+   top: 210px;
+   left: 50px;
+}
+
+/* ACTION */
+.button-outo:hover ~ .box .box__element-chainge {
+   z-index: auto;
+}
+.button-1:hover ~ .box .box__element-chainge {
+   z-index: 1;
+}
+.button-3:hover ~ .box .box__element-chainge {
+   z-index: 2;
+}
+.button-5:hover ~ .box .box__element-chainge {
+   z-index: 4;
+}
+.button-7:hover ~ .box .box__element-chainge {
+   z-index: 6;
+}
+
+/* CAR */
+.poligon3 {
+   width: 500px;
+   height: 350px;
+   margin: 0 auto;
+   padding: 25px;
+   border: 1px solid gainsboro;
+   position: relative;
+}
+
+.poligon3 > * {
+   position: absolute;
+}
+
+.car {
+   width: 100%;
+   height: 100%;
+   background-color: rgb(227, 226, 226);
+   position: relative;
+}
+
+.element {
+   position: absolute;
+}
+.element--1 {
+   top: 10px;
+   left: 70px;
+}
+.element--2 {
+   top: 20px;
+   left: 80px;
+}
+.element--3 {
+   left: 105px;
+   top: 45px;
+}
+.element--4 {
+   top: 84px;
+   left: 115px;
+}
+.element--5 {
+   left: 175px;
+   top: 25px;
+}
