@@ -96,7 +96,7 @@
    position: absolute;
    z-index: 2;
    top: 0px;
-   left: 47.5%px;
+   left: 47.5%;
 }
 .element--scale-xy:hover .element__object {
    z-index: 1;
