@@ -1,0 +1,236 @@
+.wrapper {
+   overflow: hidden;
+   height: 100%;
+}
+
+.page {
+   background-color: #333;
+   height: 100%;
+   padding: 20px;
+   overflow: auto;
+}
+
+.transform {
+   padding: 25px;
+   border: 1px solid #555;
+   width: max-content;
+}
+
+.transform:not(:last-child) {
+   margin-right: 30px;
+   margin-bottom: 30px;
+}
+.element:not(:last-child) {
+   margin-right: 30px;
+}
+.element {
+   width: max-content;
+   height: max-content;
+   text-align: center;
+   display: inline-block;
+   position: relative;
+}
+.element__title {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 12px;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   color: white;
+   margin-bottom: 20px;
+}
+.element__area {
+   width: 160px;
+   height: 160px;
+   background-color: #555;
+   box-shadow: inset 3px 3px 2px #222;
+   position: relative; /* Це позиціонування для псевдокласів */
+   perspective: 200px;
+}
+.element__object {
+   height: 100%;
+   width: 100%;
+   border: 1px solid #555;
+   background: url(../image/500px-NewTux.png) center / cover no-repeat;
+   position: relative;
+}
+
+/* TRANSLATE */
+.element--translate-xy .element__area::before,
+.element--translate-x .element__area::before,
+.element--translate-y .element__area::before {
+   content: "";
+   width: 5px;
+   height: 5px;
+   border-radius: 50%;
+   background-color: red;
+   position: absolute;
+   z-index: 2;
+   top: 0px;
+   left: 0px;
+}
+.element--translate-xy:hover .element__object {
+   position: relative;
+   z-index: 1;
+   transform: translate(40px, 40px);
+}
+.element--translate-x:hover .element__object {
+   position: relative;
+   z-index: 1;
+   transform: translatex(40px);
+}
+.element--translate-y:hover .element__object {
+   position: relative;
+   z-index: 1;
+   transform: translatey(40px);
+}
+
+/* SCALE*/
+.element--scale-xy .element__area::before,
+.element--scale-x .element__area::before,
+.element--scale-y .element__area::before {
+   content: "";
+   width: 5px;
+   height: 5px;
+   border-radius: 50%;
+   background-color: red;
+   position: absolute;
+   z-index: 2;
+   top: 0px;
+   left: 47.5%px;
+}
+.element--scale-xy:hover .element__object {
+   z-index: 1;
+   transform-origin: 50% 0px;
+   transform: scale(1.5);
+}
+.element--scale-x:hover .element__object {
+   z-index: 1;
+   transform-origin: 50% 0px;
+   transform: scalex(1.5);
+}
+.element--scale-y:hover .element__object {
+   z-index: 1;
+   transform-origin: 50% 0px;
+   transform: scaleY(1.5);
+}
+
+/* ROTATE*/
+.element--rotate-xy .element__area::before,
+.element--rotate-x .element__area::before,
+.element--rotate-y .element__area::before {
+   content: "";
+   width: 7px;
+   height: 7px;
+   border-radius: 50%;
+   background-color: red;
+   position: absolute;
+   z-index: 2;
+   top: 47.5%;
+   left: 48%;
+}
+.element--rotate-x .element__area::after {
+   content: "";
+   width: 100%;
+   border-top: 2px dashed red;
+   position: absolute;
+   z-index: 1;
+   left: 0;
+   top: 49.5%;
+}
+.element--rotate-y .element__area::after {
+   content: "";
+   height: 100%;
+   border-left: 2px dashed red;
+   position: absolute;
+   z-index: 1;
+   left: 50%;
+   top: 0px;
+}
+.element--rotate-xy:hover .element__object {
+   z-index: 1;
+   transform: rotate(45deg);
+}
+.element--rotate-x:hover .element__object {
+   z-index: 1;
+   transform: rotatex(45deg);
+}
+.element--rotate-y:hover .element__object {
+   z-index: 1;
+   transform: rotatey(65deg);
+}
+
+/* SKEW*/
+.element--skew-xy .element__area::before {
+   content: "";
+   width: 100%;
+   border-top: 2px dashed red;
+   position: absolute;
+   z-index: 2;
+   top: 49%;
+   left: 0;
+}
+.element--skew-xy .element__area::after {
+   content: "";
+   height: 100%;
+   border-right: 2px dashed red;
+   position: absolute;
+   z-index: 2;
+   top: 0;
+   left: 49%;
+}
+.element--skew-x .element__area::before {
+   content: "";
+   height: 7px;
+   width: 7px;
+   background-color: red;
+   border-radius: 50%;
+   position: absolute;
+   z-index: 2;
+   top: 47%;
+   left: 49%;
+}
+.element--skew-x .element__area::after {
+   content: "";
+   width: 100%;
+   border-top: 2px dashed red;
+   position: absolute;
+   z-index: 2;
+   top: 49%;
+   left: 0;
+}
+.element--skew-y .element__area::before {
+   content: "";
+   height: 7px;
+   width: 7px;
+   background-color: red;
+   border-radius: 50%;
+   position: absolute;
+   z-index: 2;
+   top: 47%;
+   left: 47.5%;
+}
+.element--skew-y .element__area::after {
+   content: "";
+   height: 100%;
+   border-right: 2px dashed red;
+   position: absolute;
+   z-index: 2;
+   top: 0;
+   left: 49%;
+}
+.element--skew-xy:hover .element__object {
+   z-index: 1;
+   transform: skew(25deg, 25deg);
+}
+.element--skew-x:hover .element__object {
+   z-index: 1;
+   transform: skewx(25deg);
+}
+.element--skew-y:hover .element__object {
+   z-index: 1;
+   transform: skewy(25deg);
+}
+/* 3D */
+.element--3d-transform:hover .element__object {
+   transform: scale3d(1, 1, 3) translate3d(50px, 20px, 20px);
+}
